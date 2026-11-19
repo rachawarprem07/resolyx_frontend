@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Resolyx — Private AI Helpdesk</title>
+    <meta
+      name="description"
+      content="Manage IT and customer support with Resolyx, an AI-powered helpdesk designed for private AI assistance, company knowledge, and controlled automation."
+    />
+    <!-- Open Graph / Social Media -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Resolyx — Private AI Helpdesk" />
+    <meta
+      property="og:description"
+      content="Manage IT and customer support with Resolyx, an AI-powered helpdesk designed for private AI assistance, company knowledge, and controlled automation."
+    />
+    <meta property="og:image" content="/brand/resolva-og.png" />
+
+    <!-- Google Fonts: Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Theme & Color initialization script to prevent flash of wrong theme/colors -->
+    <script>
+      (function () {
+        try {
+          var storedTheme = localStorage.getItem('resolyx-theme') || localStorage.getItem('resolva-theme');
+          var theme = storedTheme || 'dark';
+          document.documentElement.setAttribute('data-theme', theme);
+          if (theme === 'dark') {
+            document.documentElement.classList.add('dark');
+          } else {
+            document.documentElement.classList.remove('dark');
+          }
+
+          var storedColor = localStorage.getItem('resolyx-primary-color') || localStorage.getItem('resolva-primary-color') || '#6366F1';
+          var clean = storedColor.replace('#', '').trim();
+          if (clean.length === 3) clean = clean.split('').map(function(c){ return c+c; }).join('');
+          if (clean.length === 6) {
+            var r = parseInt(clean.substring(0, 2), 16) || 99;
+            var g = parseInt(clean.substring(2, 4), 16) || 102;
+            var b = parseInt(clean.substring(4, 6), 16) || 241;
+            document.documentElement.style.setProperty('--brand-indigo', '#' + clean);
+            document.documentElement.style.setProperty('--brand-indigo-rgb', r + ' ' + g + ' ' + b);
+            document.documentElement.style.setProperty('--color-primary', '#' + clean);
+            document.documentElement.style.setProperty('--color-border-focus', '#' + clean);
+          }
+        } catch (e) {
+          // ignore
+        }
+      })();
+    </script>
+  </head>
+  <body class="min-h-screen bg-background text-foreground antialiased selection:bg-brand-indigo/20 selection:text-brand-indigo">
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>

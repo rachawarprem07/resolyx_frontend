@@ -1,0 +1,12 @@
+export { LandingPage } from './pages/LandingPage';
+export { HeroSection } from './components/HeroSection';
+export { HeroBrowserMockup } from './components/HeroBrowserMockup';
+export { AutonomousHelpdeskShowcase } from './components/AutonomousHelpdeskShowcase';
+export { HelpdeskPreview } from './components/HelpdeskPreview';
+export { TrustSection } from './components/TrustSection';
+export { FeaturesSection } from './components/FeaturesSection';
+export { HowItWorksSection } from './components/HowItWorksSection';
+export { PrivacySection } from './components/PrivacySection';
+export { UseCasesSection } from './components/UseCasesSection';
+export { FAQSection } from './components/FAQSection';
+export { FinalCTASection } from './components/FinalCTASection';

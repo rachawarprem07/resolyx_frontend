@@ -1,0 +1,92 @@
+/**
+ * Resolyx Design System — Theme Definitions
+ * Supports Light (:root / [data-theme="light"]) and Dark ([data-theme="dark"])
+ */
+
+:root,
+[data-theme='light'] {
+  --color-scheme: light;
+
+  /* Primary Brand Actions */
+  --color-primary: var(--brand-indigo);
+  --color-primary-hover: var(--brand-indigo-hover);
+  --color-accent: var(--brand-violet);
+  --color-accent-hover: var(--brand-violet-hover);
+
+  /* Surfaces & Backgrounds */
+  --color-background: #f8fafc; /* Soft Cloud */
+  --color-surface: #ffffff; /* Pure White */
+  --color-surface-elevated: #ffffff;
+  --color-surface-subtle: #f1f5f9;
+  --color-surface-muted: #e2e8f0;
+
+  /* Text & Foreground */
+  --color-text: #172033; /* Slate Black */
+  --color-text-muted: #64748b; /* Muted Slate */
+  --color-text-subtle: #94a3b8;
+  --color-text-inverse: #ffffff;
+
+  /* Borders & Dividers */
+  --color-border: #e2e8f0;
+  --color-border-subtle: #f1f5f9;
+  --color-border-focus: var(--brand-indigo);
+
+  /* UI Cards & Elements */
+  --color-card-bg: #ffffff;
+  --color-card-border: #e2e8f0;
+  --color-card-hover-border: #cbd5e1;
+
+  /* Shadows */
+  --shadow-subtle: 0 1px 2px 0 rgba(15, 23, 42, 0.05);
+  --shadow-card: 0 4px 6px -1px rgba(15, 23, 42, 0.05), 0 2px 4px -2px rgba(15, 23, 42, 0.05);
+  --shadow-elevated:
+    0 10px 25px -5px rgba(15, 23, 42, 0.08), 0 8px 10px -6px rgba(15, 23, 42, 0.04);
+  --shadow-glow-indigo: 0 0 25px rgba(99, 102, 241, 0.15);
+
+  /* Header Blur Background */
+  --color-header-bg: rgba(248, 250, 252, 0.85);
+  --color-header-border: rgba(226, 232, 240, 0.8);
+}
+
+[data-theme='dark'] {
+  --color-scheme: dark;
+
+  /* Primary Brand Actions */
+  --color-primary: var(--brand-indigo);
+  --color-primary-hover: var(--brand-indigo-hover);
+  --color-accent: #8b5cf6;
+  --color-accent-hover: #a78bfa;
+
+  /* Surfaces & Backgrounds */
+  --color-background: #0b1020; /* Midnight Navy */
+  --color-surface: #151c2e; /* Deep Slate */
+  --color-surface-elevated: #1e293b;
+  --color-surface-subtle: #182238;
+  --color-surface-muted: #243048;
+
+  /* Text & Foreground */
+  --color-text: #f8fafc; /* Soft Cloud */
+  --color-text-muted: #94a3b8; /* Slate Light */
+  --color-text-subtle: #64748b;
+  --color-text-inverse: #0b1020;
+
+  /* Borders & Dividers */
+  --color-border: #232f48;
+  --color-border-subtle: #1a2438;
+  --color-border-focus: var(--brand-indigo);
+
+  /* UI Cards & Elements */
+  --color-card-bg: #151c2e;
+  --color-card-border: #232f48;
+  --color-card-hover-border: #334366;
+
+  /* Shadows */
+  --shadow-subtle: 0 1px 2px 0 rgba(0, 0, 0, 0.3);
+  --shadow-card: 0 4px 12px 0 rgba(0, 0, 0, 0.4);
+  --shadow-elevated: 0 20px 25px -5px rgba(0, 0, 0, 0.5), 0 8px 10px -6px rgba(0, 0, 0, 0.5);
+  --shadow-glow-indigo: 0 0 30px rgba(99, 102, 241, 0.25);
+
+  /* Header Blur Background */
+  --color-header-bg: rgba(11, 16, 32, 0.85);
+  --color-header-border: rgba(35, 47, 72, 0.7);
+}
